@@ -64,7 +64,7 @@ def query_gemini_flash(prompt, api_key):
 
 # Replace your previous LLM call with:
 # Get your Google API key from: https://aistudio.google.com/app/apikey
-GOOGLE_API_KEY =os.getenv("gemini")
+GOOGLE_API_KEY = ""
 while (True):
     query=input("Your Question:")
     # Your existing combined input
