@@ -2,6 +2,8 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma #local vectorial db
 from dotenv import load_dotenv
 import google.generativeai as genai
+import os
+
 
 load_dotenv()
 
@@ -62,7 +64,7 @@ def query_gemini_flash(prompt, api_key):
 
 # Replace your previous LLM call with:
 # Get your Google API key from: https://aistudio.google.com/app/apikey
-GOOGLE_API_KEY = "AIzaSyC1r9n_yF4nV6MmUQ9MmJnHJ4D4gjnTXQk"
+GOOGLE_API_KEY =os.getenv("gemini")
 while (True):
     query=input("Your Question:")
     # Your existing combined input
@@ -84,4 +86,5 @@ while (True):
         print(result)
     else:
         print("Failed to get response from Gemini Flash")
+
 
